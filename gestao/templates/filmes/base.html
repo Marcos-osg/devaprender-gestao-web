@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Gestão de filmes</title>
+  </head>
+  {% load static %}
+  <body style="background-image: url({% static 'images/2.jpg' %});">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'listar_filmes' %}">Meus Filmes</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="api/filmes/">API</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <link rel="stylesheet" href="static/footer-white.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <div class="content">
+    {% block conteudo %}
+    {% endblock %}
+
+    </div>
+    <footer id="myFooter">
+        <div class="container">
+            <p class="footer-copyright">© 2021 Copyright - Marcos Sousa</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/marcos-sousa-oliveira/" class="social-icons"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/MrSkyGold" class="social-icons"><i class="fa fa-github"></i></a>
+        </div>
+    </footer>
+    <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+    <style type="text/css">
+    a:link{text-decoration: none;}
+    </style>
+  </body>
+</html>

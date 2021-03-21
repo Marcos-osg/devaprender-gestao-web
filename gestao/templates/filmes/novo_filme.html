@@ -1,0 +1,21 @@
+{% extends 'filmes/base.html' %}
+{% block conteudo %}
+{% load widget_tweaks %}
+    <div class="container">
+        <table class="table">
+            <form class="form-floating" method="POST">
+                {% csrf_token %}
+                <div class="form-row align-itens-center">
+                    <h1 style="text-align:center">Formulario de novo Filme</h1>
+                    <label>Nome do Filme</label>
+                    {% render_field filmes.filme class="form-control" placeholder="digite o nome do filme" %}
+                    <label>Finalizado</label>
+                    {% render_field filmes.finalizado class="form-control form-check-input" %}
+                    <label>Resenha</label>
+                    {% render_field filmes.resenha class="form-control pull-left" placeholder="Escreva o que achou do filme" %}
+                </div>
+                <button style="margin-top: 10px;" class="btn btn-success" type="submit">Salvar</button>
+            </form>
+        </table>
+    </div>    
+{% endblock %}

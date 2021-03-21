@@ -1,0 +1,37 @@
+{% extends 'filmes/base.html' %}
+{% block conteudo %}
+<h1 style="text-align: center;">Detalhe do Filme</h1>
+<div class="container">
+
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <td>Id</td>
+                <td>Filme</td>
+                <td style="text-align: center;">Finalizado</td>
+                <td>Resenha</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{filmes.id}}</td>
+                <td>{{filmes.filme}}</td>
+                {% if filmes.finalizado %}
+                <td style="text-align:center"><input disabled class="form-check-input" type="checkbox" value="" checked>
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Sim
+                    </label>
+                </td>
+                {% else %}
+                <td style="text-align:center"><input disabled class="form-check-input" type="checkbox" value="" >
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Não
+                    </label>
+                </td>
+                {% endif %}
+                <td>{{filmes.resenha}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
