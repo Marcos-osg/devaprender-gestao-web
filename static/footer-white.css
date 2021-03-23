@@ -41,7 +41,7 @@
     margin-right: 15px;
     margin-left: 20px;
     background-color: white;
-    color: #d0d0d0;
+    color: #020101;
     border-radius: 51%;
     padding: 10px;
     height: 60px;
@@ -52,39 +52,22 @@
     transition:color 0.2s;
 }
 
-#myFooter .fa-facebook:hover{
+#myFooter .fa-linkedin:hover{
    color: #2b55ff;
 }
 
-#myFooter .fa-facebook:focus{
+#myFooter .fa-linkedin:focus{
     color: #2b55ff; 
 }
 
-#myFooter .fa-instagram:hover{
-    color:purple;
-}
 
-#myFooter .fa-instagram:focus{
-    color:purple;
-}
-
-#myFooter .fa-youtube:hover{
+#myFooter .fa-github:hover{
     color:red;
 }
 
-#myFooter .fa-youtube:focus{
+#myFooter .fa-github:focus{
     color:red;
 }
-
-#myFooter .fa-twitter:hover{
-    color: #00aced;
-
-}
-
-#myFooter .fa-twitter:focus{
-    color:#00aced;
-}
-
 
 
 /* CSS utilizado para posicionar o rodapé no final da página. */
